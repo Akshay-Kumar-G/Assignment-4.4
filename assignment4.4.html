@@ -1,0 +1,47 @@
+<!DOCUMENTTYPE HTML>
+	<html>
+<head>
+<title>Assignment4.4</title>
+<style type="text/css"></style>
+</head>
+<body>
+<h1 style="color: blue;"> This is Assignment 4.4</h1>
+<p style="color: blue;"> <b>Assignment:</b><br>
+Create a Div box and insert an image as bicycle inside the Div box and perform the following tasks:<br>
+ Drive the image with animation timing duration to 5s.<br>
+ Animate the image using animation-timing-function.<br>
+ Add animation iteration property to make the animation infinite.<br>
+ Animate the image from margin left 0px to left 500px. Use @keyframes.<br>
+<!-- internal style  psudo property hover-->
+<!-- animation for Transition and transform on hover and image border-radius changes during hover-->
+<style>
+ 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: mymove infinite; /* Safari 4.0 - 8.0 */ 
+    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+     -webkit-animation-timing-function: ease-in; /* Safari 4.0 - 8.0 */
+     animation: mymove infinite; 		/* infinite iteration */
+    animation-duration: 5s;				/* time duration */
+    animation-timing-function: ease-in; /* timing-function */
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 500px;}
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 500px;}
+}
+</style>
+<div><img src='bicycle.jpg'/></div>
+
+
+</body>
+</html>
